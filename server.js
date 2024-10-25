@@ -11,7 +11,10 @@ const upload = multer({ dest: 'uploads/' })
 
 app.use('/static',express.static('public'))
 const port = 3000
-
+// const port = process.env.PORT || 3000;
+// app.listen(port, () => {
+//   console.log(`Server running on port ${port}`);
+// });
 // app.use(express.static('templates'));
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname,"index.html"))
